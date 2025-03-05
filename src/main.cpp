@@ -6,7 +6,7 @@
 #define buzzer 22
 #define led 23
 
-#define tempoDeEspera 3000
+#define tempoDeEspera 1000
 
 
 void setup() {
@@ -25,24 +25,37 @@ void setup() {
 void loop() {
   
   int estadoDoBotao = digitalRead(botaoDeTeste);
-  int estadoDoProbe1 = digitalRead(PROBE_1);
-  int estadoDoProbe2 = digitalRead(PROBE_2);
-
+  
   if(estadoDoBotao == LOW){
 
     digitalWrite(led, HIGH);
+    Serial.println("Teste iniciado");
     delay(tempoDeEspera);
 
-    while(!(estadoDoProbe1 == LOW) && (estadoDoProbe2 == LOW))
-    {
+    int estadoDoProbe1 = digitalRead(PROBE_1);
+    int estadoDoProbe2 = digitalRead(PROBE_2);
+    
+    if(estadoDoProbe1 == LOW && estadoDoProbe2 == LOW){
       
+      for(int i = 0; i < 4; i++){
+        //tone(buzzer,1000, 200);
+        digitalWrite(buzzer, HIGH);
+        delay(50);
+        digitalWrite(buzzer, LOW);
+        delay(50);
+      }
+    
+    }
+    
+    else
+    {
+      //tone(buzzer, 1000, 1000);
+      digitalWrite(buzzer, HIGH);
+      delay(1000);
+      digitalWrite(buzzer, LOW);
     }
     
     digitalWrite(led, LOW);
-    tone(buzzer, 1000, 200);
-    delay(200);
-    //noTone(buzzer);
-
   }
 
 }
