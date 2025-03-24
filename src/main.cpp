@@ -49,7 +49,6 @@ void loop() {
       
       // Acionamento do buzzer
       for(int i = 0; i < 4; i++){
-        //tone(buzzer,1000, 200);
         digitalWrite(buzzer, HIGH);
         delay(50);
         digitalWrite(buzzer, LOW);
@@ -60,14 +59,12 @@ void loop() {
     
     // Verificação do estado do probe 1
     else if(estadoDoProbe1 == LOW){
-      //tone(buzzer, 1000, 1000);
       digitalWrite(buzzer, HIGH);
       delay(1000);
       digitalWrite(buzzer, LOW);
     }
     else
     {
-      //tone(buzzer, 1000, 1000);
       digitalWrite(buzzer, HIGH);
       delay(1000);
       digitalWrite(buzzer, LOW);
