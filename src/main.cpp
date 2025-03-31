@@ -2,6 +2,7 @@
 
 
 // Definição dos pinos
+// TODO alterar variáveis para constantes (#define para const)
 #define botaoDeTeste 18
 #define PROBE_1 19
 #define PROBE_2 21
