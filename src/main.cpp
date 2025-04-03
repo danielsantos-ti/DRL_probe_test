@@ -1,12 +1,15 @@
 
 /*
 Data de criação: 03/03/2025
+Versão: v1.0.0 - Úlima atualização: 03/03/2025
+Descrição: Código desenvolvido para checar a presença de parafusos do drive do DLR (VW216), utilizando o ESP32 para processar o teste.
+
 Autores:
 - Daniel Santos - Engenheiro de Software
 - Vagner Martines - Técnico de eletrônica
 - Ezequiel Paiva - Técnico de eletrônica
 - Alvaro Lazaroff - Técnico de eletrônica
-Versão: v1.0.0
+
 
 Descrição
 Código desenvolvido para checar a presença de parafusos do drive do DLR (VW216), utilizando o ESP32 para processar o teste.
