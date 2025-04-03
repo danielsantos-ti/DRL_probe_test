@@ -27,6 +27,9 @@ const int led = 23;
 // Definição do tempo de espera
 const int tempoDeEspera = 1000; // 1 segundo
 
+// Definição do tempo de espera do buzzer
+const int tempoDeEsperaBuzzer = 5000; // 5 segundos
+
 // Função setup
 void setup() {
   
@@ -60,7 +63,7 @@ void loop() {
     int estadoDoProbe1 = digitalRead(PROBE_1);
     int estadoDoProbe2 = digitalRead(PROBE_2);
     
-    // Verificação dos estados dos probes
+    // Verificação do estado dos probes
     if(estadoDoProbe1 == LOW && estadoDoProbe2 == LOW){
       
       // Acionamento do buzzer
@@ -73,16 +76,16 @@ void loop() {
     
     }
     
-    // Verificação do estado do probe 1
+    // Verificação do estado dos probes
     else if(estadoDoProbe1 == LOW){
       digitalWrite(buzzer, HIGH);
-      delay(1000);
+      delay(tempoDeEsperaBuzzer);
       digitalWrite(buzzer, LOW);
     }
     else
     {
       digitalWrite(buzzer, HIGH);
-      delay(1000);
+      delay(tempoDeEsperaBuzzer);
       digitalWrite(buzzer, LOW);
     }
     
