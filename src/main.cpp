@@ -1,5 +1,6 @@
 
-/*Data de criação: 03/03/2025
+/*
+Data de criação: 03/03/2025
 Autores:
 - Daniel Santos - Engenheiro de Software
 - Vagner Martines - Técnico de eletrônica
