@@ -25,7 +25,7 @@ const int buzzer = 22;
 const int led = 23;
 
 // Definição do tempo de espera
-#define tempoDeEspera 1000
+const int tempoDeEspera = 1000; // 1 segundo
 
 // Função setup
 void setup() {
