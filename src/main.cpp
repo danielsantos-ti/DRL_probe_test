@@ -1,6 +1,5 @@
 #include <Arduino.h>
 
-
 // Definição dos pinos
 // TODO alterar variáveis para constantes (#define para const)
 #define botaoDeTeste 18
