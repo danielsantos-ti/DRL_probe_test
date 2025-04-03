@@ -18,12 +18,11 @@ Código desenvolvido para checar a presença de parafusos do drive do DLR (VW216
 #include <Arduino.h>
 
 // Definição dos pinos
-// TODO alterar variáveis para constantes (#define para const)
-#define botaoDeTeste 18
-#define PROBE_1 19
-#define PROBE_2 21
-#define buzzer 22
-#define led 23
+const int botaoDeTeste = 18;
+const int PROBE_1 = 19;
+const int PROBE_2 = 21;
+const int buzzer = 22;
+const int led = 23;
 
 // Definição do tempo de espera
 #define tempoDeEspera 1000
