@@ -1,9 +1,20 @@
 /*
 Data de criação: 03/03/2025
+Descrição do projeto:
+Código desenvolvido para checar a presença de parafusos do drive do DLR (VW216), utilizando o ESP32 para processar o teste.
 
+--
+Versão: v1.1.1 - Úlima atualização: 04/03/2025
+Descrição:
+- Adiciona LED vermelho para indicar falha no teste.
+- Adiciona LED verde para indicar sucesso no teste.
+- Aumenta o tempo do beep do buzzer para 5 segundos.
+
+--
 Versão: v1.0.1 - Úlima atualização: 03/03/2025
 Descrição: Adiciona variável para o tempo de espera do buzzer, para evitar que o buzzer fique acionado por muito tempo.
 
+--
 Versão: v1.0.0 - Úlima atualização: 03/03/2025
 Descrição: Código desenvolvido para checar a presença de parafusos do drive do DLR (VW216), utilizando o ESP32 para processar o teste.
 
@@ -13,9 +24,6 @@ Autores:
 - Ezequiel Paiva - Técnico de eletrônica
 - Alvaro Lazaroff - Técnico de eletrônica
 
-
-Descrição
-Código desenvolvido para checar a presença de parafusos do drive do DLR (VW216), utilizando o ESP32 para processar o teste.
 */
 
 #include <Arduino.h>
