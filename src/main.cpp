@@ -1,4 +1,3 @@
-
 /*
 Data de criação: 03/03/2025
 
@@ -26,7 +25,8 @@ const int botaoDeTeste = 18;
 const int PROBE_1 = 19;
 const int PROBE_2 = 21;
 const int buzzer = 22;
-const int led = 23;
+const int led_verde = 23;
+const int led_vermelho = 5;
 
 // Definição do tempo de espera
 const int tempoDeEspera = 1000; // 1 segundo
@@ -42,7 +42,8 @@ void setup() {
   pinMode(PROBE_1, INPUT_PULLUP);
   pinMode(PROBE_2, INPUT_PULLUP);
   pinMode(buzzer, OUTPUT);
-  pinMode(led, OUTPUT);
+  pinMode(led_verde, OUTPUT);
+  pinMode(led_vermelho, OUTPUT);
 
   // Inicialização da comunicação serial
   Serial.begin(115200);
@@ -59,17 +60,21 @@ void loop() {
   if(estadoDoBotao == LOW){
 
     // Acionamento do led
-    digitalWrite(led, HIGH);
     Serial.println("Teste iniciado");
     delay(tempoDeEspera);
 
     // Leitura dos estados dos probes
     int estadoDoProbe1 = digitalRead(PROBE_1);
     int estadoDoProbe2 = digitalRead(PROBE_2);
+
+    digitalWrite(led_verde, LOW);
+    digitalWrite(led_vermelho, LOW);
     
     // Verificação do estado dos probes
     if(estadoDoProbe1 == LOW && estadoDoProbe2 == LOW){
       
+      // Aciona o LED Verde
+      digitalWrite(led_verde, HIGH);
       // Acionamento do buzzer
       for(int i = 0; i < 4; i++){
         digitalWrite(buzzer, HIGH);
@@ -77,23 +82,37 @@ void loop() {
         digitalWrite(buzzer, LOW);
         delay(50);
       }
+
+    // Aciona o LED verde.
+    delay(tempoDeEspera);
+    digitalWrite(led_verde, LOW);
+    Serial.println("Teste aprovado.");
     
     }
     
     // Verificação do estado dos probes
     else if(estadoDoProbe1 == LOW){
+      // Aciona o LED Vermelho
+      digitalWrite(led_vermelho, HIGH);
       digitalWrite(buzzer, HIGH);
       delay(tempoDeEsperaBuzzer);
       digitalWrite(buzzer, LOW);
+      Serial.println("Teste reprovado.");
     }
     else
     {
+      // Aciona o LED Vermelho
+      digitalWrite(led_vermelho, HIGH);
       digitalWrite(buzzer, HIGH);
       delay(tempoDeEsperaBuzzer);
       digitalWrite(buzzer, LOW);
+      Serial.println("Teste reprovado.");
     }
     
-    digitalWrite(led, LOW);
   }
+
+  delay(tempoDeEspera);
+  digitalWrite(led_verde, LOW);
+  digitalWrite(led_vermelho, LOW);
 
 }
