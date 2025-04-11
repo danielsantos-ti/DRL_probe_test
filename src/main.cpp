@@ -28,12 +28,6 @@ Autores:
 
 #include <Arduino.h>
 
-/*
-TODO:
-- Susbtituir o relé por um transistor.
-- Aguardar retorno dos estagiários. 
-*/ 
-
 // Definição dos pinos
 const int botaoDeTeste = 15;
 const int PROBE_1 = 4;
