@@ -87,7 +87,7 @@ void loop() {
     int estadoDoProbe1 = digitalRead(PROBE_1);
     int estadoDoProbe2 = digitalRead(PROBE_2);
 
-    // REsetando os estados dos LEDs e do transistor
+    // Resetando os estados dos LEDs e do transistor
     digitalWrite(led_verde, LOW);
     digitalWrite(led_vermelho, LOW);
     digitalWrite(transistor, LOW);
