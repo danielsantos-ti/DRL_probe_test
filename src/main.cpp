@@ -1,7 +1,9 @@
 /*
 Data de criação: 03/03/2025
 Descrição do projeto:
-Código desenvolvido para checar a presença de parafusos do drive do DLR (VW216), utilizando o ESP32 para processar o teste.
+Código verifica a presença de parafusos na peça.Caso os parafusos estejam presentes,
+o sistema deve acionar um LED verde e um buzzer para indicar sucesso no teste.
+Caso contrário, um LED vermelho deve ser acionado e um buzzer deve ser ativado.
 
 --
 Versão: v1.1.1 - Úlima atualização: 04/03/2025
@@ -12,11 +14,11 @@ Descrição:
 
 --
 Versão: v1.0.1 - Úlima atualização: 03/03/2025
-Descrição: Adiciona variável para o tempo de espera do buzzer, para evitar que o buzzer fique acionado por muito tempo.
+Descrição: Adiciona variável para controlar o tempo de espera do buzzer.
 
 --
 Versão: v1.0.0 - Úlima atualização: 03/03/2025
-Descrição: Código desenvolvido para checar a presença de parafusos do drive do DLR (VW216), utilizando o ESP32 para processar o teste.
+Descrição: Código verifica a presença de parafusos na peça.
 
 Autores:
 - Daniel Santos - Engenheiro de Software
