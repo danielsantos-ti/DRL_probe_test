@@ -25,12 +25,15 @@ Autores:
 - Vagner Martines - Técnico de eletrônica
 - Ezequiel Paiva - Técnico de eletrônica
 - Alvaro Lazaroff - Técnico de eletrônica
+- Marco Antonio - Técnico de eletrônica
+- Mateus Rodrigues - Técnico de eletrônica
+
 
 */
 
 #include <Arduino.h>
 
-// Definição dos pinos
+// Definição dos pinos no circuito
 const int botaoDeTeste = 15;
 const int PROBE_1 = 4;
 const int PROBE_2 = 5;
